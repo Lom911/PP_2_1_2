@@ -1,6 +1,6 @@
 public class RimGo {
-    int[] arab = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    String[] rim = {"0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+    int[] arab;
+            String[] rim;
                     int x = 0;
                  int t = 0;
                 int y = 0;
