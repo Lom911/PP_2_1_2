@@ -10,19 +10,16 @@ public class RimGo {
              switch (znak1) {
                  case "+" -> summ = x + y;
                  case "-" -> summ = x - y;
-                 case "/" -> summ = x / y;
-                 case "*" -> summ = x * y;
-                 default -> {
-                     try {
-                         throw new Exception("Не верный знак");
-                     } catch (Exception e) {
-                         throw new RuntimeException(e);
-                     }
+                 case "/" -> {
+                     if (y == 0) {
+                         throw new Exception("На 0 делить нельзя");
+                     } else
+                         summ = (x / y);
                  }
+                 case "*" -> summ = x * y;
+                 default -> throw new Exception("Не верный знак");
              }
-             if (summ < 0) {
-                 throw new Exception("Сумма меньше 0");
-             }
+             if (summ < 0) throw new Exception("Сумма меньше 0");
         if (summ == 0) {
             System.out.println("0");
             System.exit(1);
