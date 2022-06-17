@@ -46,9 +46,9 @@ public class RimGo {
                      summ = summ - 10;
                  }
              }
-             for (int i = 0; i < arab.length; i++)
+             for (int i = 1; i < arab.length; i++)
                  if (summ == (arab[i])) {
-                     System.out.println(rim[i]);
+                     System.out.print(rim[i]);
                  }
          }
 }
