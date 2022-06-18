@@ -19,11 +19,10 @@ public class RimGo {
                  case "*" -> summ = x * y;
                  default -> throw new Exception("Не верный знак");
              }
-             if (summ < 0) throw new Exception("Сумма меньше 0");
-        if (summ == 0) {
-            System.out.println("0");
-            System.exit(1);
-        }
+             if (summ <= 0) {
+                 throw new Exception("В Римских числах нет 0");
+             }
+
              if (summ == 100) {
                  System.out.println("C");
                  System.exit(1);

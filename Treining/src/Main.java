@@ -7,11 +7,11 @@ public class Main {
         String exp1 = input.nextLine();
         input.close();
         String[] exp = exp1.split(" ");
-        if (exp.length != 3) throw new Exception("Введено более 2х значений"); // проверка на количество символов
+        if (exp.length != 3) throw new Exception("ошибка ввода"); // проверка на количество символов
         int x = -1;
         int y = -1;
-        int[] arab = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        String[] rim = {"0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+        int[] arab = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        String[] rim = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
         boolean uslRim1 = false;
         boolean uslRim2 = false;
         for (int i = 0; i < rim.length; i++) {
