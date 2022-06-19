@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class RimGo {
     int[] arab;
             String[] rim;
@@ -44,7 +42,7 @@ public class RimGo {
              }
              for (int j = 0; j < 4; j++) {
                  t = summ / 10;
-                 if ((t > 0) && (j == 0)) {
+                 if ((t > 0) && (j == 0) && (k == 0)) {
                       resul = "X";
                      summ = summ - 10;
                  }
