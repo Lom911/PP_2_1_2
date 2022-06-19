@@ -10,7 +10,6 @@ public class RimGo {
                 int k = 0;
                 String znak1;
                 String resul;
- //   String [] test = new String[1];
     public void summ() throws Exception {
              switch (znak1) {
                  case "+" -> summ = x + y;
@@ -40,7 +39,6 @@ public class RimGo {
                      }
              k = summ / 50;
              if (k > 0) {
-         //        System.out.print("L");
                  resul = "L";
                  summ = summ - (50 * k);
              }
@@ -57,8 +55,6 @@ public class RimGo {
              }
              for (int i = 1; i < arab.length; i++)
                  if (summ == (arab[i])) {
-                  //   System.out.print(rim[i]);
-                  //   test[0] = rim[i];
                      resul = resul + String.join ("", rim[i]);
                         }
         System.out.println(resul);
