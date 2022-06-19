@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class RimGo {
     int[] arab;
             String[] rim;
@@ -5,7 +7,10 @@ public class RimGo {
                  int t = 0;
                 int y = 0;
                 int summ = 0;
+                int k = 0;
                 String znak1;
+                String resul;
+ //   String [] test = new String[1];
     public void summ() throws Exception {
              switch (znak1) {
                  case "+" -> summ = x + y;
@@ -30,24 +35,32 @@ public class RimGo {
              if (summ <= 10)
                  for (int i = 0; i < arab.length; i++)
                      if (summ == (arab[i])) {
-                         System.out.println(rim[i]);
+                         System.out.println(String.join("", rim[i]));
                          System.exit(1);
                      }
-             t = summ / 50;
-             if (t > 0) {
-                 System.out.print("L");
-                 summ = summ - (50 * t);
+             k = summ / 50;
+             if (k > 0) {
+         //        System.out.print("L");
+                 resul = "L";
+                 summ = summ - (50 * k);
              }
              for (int j = 0; j < 4; j++) {
                  t = summ / 10;
-                 if (t > 0) {
-                     System.out.print("X");
+                 if ((t > 0) && (j == 0)) {
+                      resul = "X";
+                     summ = summ - 10;
+                 }
+                 if ((t > 0) && (j > 0)){
+                     resul = resul + "X";
                      summ = summ - 10;
                  }
              }
              for (int i = 1; i < arab.length; i++)
                  if (summ == (arab[i])) {
-                     System.out.print(rim[i]);
-                 }
+                  //   System.out.print(rim[i]);
+                  //   test[0] = rim[i];
+                     resul = resul + String.join ("", rim[i]);
+                        }
+        System.out.println(resul);
          }
 }
