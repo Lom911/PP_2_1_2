@@ -1,13 +1,16 @@
 import java.util.*;
 import java.lang.Exception;
-
 public class Main {
     public static void main(String[] args) throws Exception {
         System.out.print("Введите выражение: ");
         Scanner input = new Scanner(System.in);
         String exp1 = input.nextLine();
         input.close();
-        String[] exp = exp1.split(" ");
+        System.out.println(calc(exp1));
+      }
+    public static String calc(String input) throws Exception {
+        String commonresult;
+          String[] exp = input.split(" ");
         if (exp.length != 3) throw new Exception("ошибка ввода"); // проверка на количество символов
         int x = -1;
         int y = -1;
@@ -33,7 +36,7 @@ public class Main {
         resultr.znak1 = znak1;
         resultr.rim = rim;
         resultr.arab = arab;
-            resultr.summ();
+            commonresult = resultr.summ();
     } else if (((!uslRim1) && (!uslRim2)) || (x == 0) || (y == 0))  {                                        // Арабский калькулятор
             int x1 = Integer.parseInt(exp[0]);
             int y1 = Integer.parseInt(exp[2]);
@@ -43,9 +46,10 @@ public class Main {
             resultr.x1 = x1;
             resultr.y1 = y1;
             resultr.znak1 = znak1;
-            resultr.summ();
+            commonresult = resultr.summ();
         }
         else
              throw new Exception("Не корректное значение");
+        return commonresult;
     }
 }

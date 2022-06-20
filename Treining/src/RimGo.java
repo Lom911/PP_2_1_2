@@ -8,7 +8,7 @@ public class RimGo {
                 int k = 0;
                 String znak1;
                 String resul;
-    public void summ() throws Exception {
+    public String summ() throws Exception {
              switch (znak1) {
                  case "+" -> summ = x + y;
                  case "-" -> summ = x - y;
@@ -26,14 +26,12 @@ public class RimGo {
              }
 
              if (summ == 100) {
-                 System.out.println("C");
-                 System.exit(1);
+                 return resul = "C";
              }
              if (summ <= 10)
                  for (int i = 0; i < arab.length; i++)
                      if (summ == (arab[i])) {
-                         System.out.println(String.join("", rim[i]));
-                         System.exit(1);
+                         return String.join("", rim[i]);
                      }
              k = summ / 50;
              if (k > 0) {
@@ -55,6 +53,6 @@ public class RimGo {
                  if (summ == (arab[i])) {
                      resul = resul + String.join ("", rim[i]);
                         }
-        System.out.println(resul);
+        return resul;
          }
 }
